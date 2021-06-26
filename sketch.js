@@ -69,6 +69,7 @@ function draw() {
     } else {
       pinkBalloon();
     }
+  }
     
     if(arrowGroup.isTouching(redB)){
   redB.destroyEach();
