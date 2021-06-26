@@ -69,6 +69,29 @@ function draw() {
     } else {
       pinkBalloon();
     }
+    
+    if(arrowGroup.isTouching(redB)){
+  redB.destroyEach();
+  arrowGroup.destroyEach();
+  score=score+1;
+}
+if(arrowGroup.isTouching(blueB)){
+  blueB.destroyEach();
+  arrowGroup.destroyEach();
+  score=score+3;
+}
+
+if(arrowGroup.isTouching(greenB)){
+  greenB.destroyEach();
+  arrowGroup.destroyEach();
+  score=score+2;
+}
+
+if(arrowGroup.isTouching(pinkB)){
+  pinkB.destroyEach();
+  arrowGroup.destroyEach();
+  score=score+5;
+}
   }  
     
   drawSprites();
@@ -125,25 +148,3 @@ function pinkBalloon() {
 }
 
 
-if(arrowGroup.isTouching(redB)){
-  redB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+1;
-}
-if(arrowGroup.isTouching(blueB)){
-  blueB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+3;
-}
-
-if(arrowGroup.isTouching(greenB)){
-  greenB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+2;
-}
-
-if(arrowGroup.isTouching(pinkB)){
-  pinkB.destroyEach();
-  arrowGroup.destroyEach();
-  score=score+5;
-}
